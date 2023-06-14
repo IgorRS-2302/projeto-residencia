@@ -23,6 +23,7 @@ export function AppContent() {
           })}
           <Route path="/" element={<Navigate to="main" replace  />} />
           <Route path="/" element={<Navigate to="cadastro" replace  />} />
+          <Route path="/" element={<Navigate to="painel" replace  />} />
         </Routes>
       </Suspense>
     </CContainer>

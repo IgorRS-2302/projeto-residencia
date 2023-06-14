@@ -53,7 +53,7 @@ export function AppHeader() {
                   <CNavItem href="#">
                     Adubo
                   </CNavItem>
-                  <CNavItem href="#">
+                  <CNavItem href="#/login">
                     Entrar
                   </CNavItem>
                 </CNavbarNav>
@@ -75,7 +75,7 @@ export function AppHeader() {
               <CNavItem href="#">
                 Adubo
               </CNavItem>
-              <CNavItem href="#" style={{border: '1px solid black', borderRadius: '4px'}}>
+              <CNavItem href="#/login" style={{border: '1px solid black', borderRadius: '4px'}}>
                 Entrar
               </CNavItem>
               {/* <CNavItem href="#/carrinho">

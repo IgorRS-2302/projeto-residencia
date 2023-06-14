@@ -1,0 +1,28 @@
+.containerLogin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 88vh;
+}
+
+.imgLogin {
+  background-image: url('../../assets/images/loginImg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.loginForm { 
+  padding: 20%;
+}
+
+.loginInfos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
