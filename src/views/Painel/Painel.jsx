@@ -2,23 +2,35 @@ import {useContext, useState} from 'react';
 import { UserContext } from '../../contexts/userContext';
 
 import './style.css'
+import MeusPedidos from './MeusPedidos';
+import MeuPerfil from './MeuPerfil';
+import FazerPedido from './FazerPedido';
 
+const nav = ["Meu perfil","Meus pedidos", "Fazer pedido"]
 
 const Painel = () => {
 
-  const [currentSection, setCurrentSection] = useState();
+  const [currentSection, setCurrentSection] = useState("Meu perfil");
   const {userData} = useContext(UserContext);
   
 
   return (
     <main>
         <aside>
-            <ul>
-                <li><button>Meus Pedidos</button></li>
-                <li><button>Fazer Pedido</button></li>
-            </ul>
+          {
+            nav.map((o) => (
+              <button onClick={()=>{setCurrentSection(()=>o)}}>{o}</button>
+            ))
+          }
         </aside>
         <section>
+          {
+            currentSection &&
+            currentSection === "Meu perfil"?<MeuPerfil/>:
+            currentSection === "Meus pedidos"?<MeusPedidos/>:
+            currentSection === "Fazer pedido"?<FazerPedido/>:
+            null
+          }
         </section>
     </main>
   )

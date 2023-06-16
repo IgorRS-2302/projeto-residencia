@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import axios from "axios";
 import { CButton, CCard, CForm, CFormInput, CFormLabel } from "@coreui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/userContext";
 import './style.css'
 
