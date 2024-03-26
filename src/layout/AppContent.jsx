@@ -19,12 +19,12 @@ export function AppContent() {
                   element={<route.element />}
                 />
               )
-            )
+            );
           })}
-          <Route path="/" element={<Navigate to="main" replace  />} />
-          <Route path="/" element={<Navigate to="cadastro" replace  />} />
+          <Route path="/" element={<Navigate to="main" replace />} />
+          <Route path="/" element={<Navigate to="cadastro" replace />} />
         </Routes>
       </Suspense>
     </CContainer>
-  )
+  );
 }
