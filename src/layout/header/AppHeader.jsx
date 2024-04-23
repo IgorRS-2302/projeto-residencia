@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 
 import Logo from "../../assets/svg/LogoWasteGreen.svg";
-import { CCollapse, CContainer, CHeader, CHeaderBrand, CHeaderNav, CImage, CNavItem, CNavLink, CNavbarNav, CNavbarToggler} from '@coreui/react';
+import { CCollapse, CContainer, CHeader, CHeaderBrand, CHeaderNav, CImage, CNavItem, CNavLink, CNavbarNav, CNavbarToggler, CButton} from '@coreui/react';
 import * as icon from '@coreui/icons';
 import CIcon from '@coreui/icons-react';
 
 export function AppHeader() {
+
+  
   const [visible, setVisible] = useState(false)
   const [exibirElemento, setExibirElemento] = useState(false)
 
@@ -40,6 +42,9 @@ export function AppHeader() {
               <CCollapse className="navbar-collapse" visible={visible}>
                 <CNavbarNav>
                   <CNavItem>
+                    <CButton>Test</CButton>
+                  </CNavItem>
+                  <CNavItem>
                     <CNavLink href="#/cadastro" active>
                       Junte-se
                     </CNavLink>
@@ -67,7 +72,7 @@ export function AppHeader() {
                 </CNavLink>
               </CNavItem>
               <CNavItem>
-                <CNavLink href="#">Nossa missão</CNavLink>
+                <CNavLink href="#"  >Nossa missão</CNavLink>
               </CNavItem>
               <CNavItem href="#">
                 Seja parceiro

@@ -1,0 +1,19 @@
+section{
+    min-height: 100vh;
+    width: 100%;
+}
+
+main{
+    display: flex;
+}
+
+aside{
+    display: flex;
+    height: 100vh;
+    border-right: 1px solid blue;
+    flex-direction: column;
+}
+
+button{
+    padding: 0.6em 1.2em;
+}

@@ -1,0 +1,23 @@
+.Perfil *{
+    border: 1px solid red;
+}
+
+.Perfil{
+    background: rgba(142, 133, 56, 0.849);
+    background: linear-gradient(128deg, rgba(56,142,60,1) 0%, rgba(139,195,74,1) 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.Perfil *{
+    color: white
+}
+
+#graph{
+    width: 36em;
+    height: 15em;
+    background-color: aliceblue;
+}

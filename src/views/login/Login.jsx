@@ -1,22 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { CButton, CCard, CForm, CFormInput, CFormLabel } from "@coreui/react";
 import { Link } from "react-router-dom";
-
+import { UserContext } from "../../contexts/userContext";
 import './style.css'
 
 const Login = () => {
   const [userEmail, setUserEmail] = useState("")
   const [userPassword, setUserPassword] = useState("")
+  const {login} = useContext(UserContext);
+  const [error, setError] = useState();
 
-  function userLogin() {
+  async function userLogin() {
     const data = {
       email: userEmail,
       senha: userPassword,
     }
 
-    axios
-    .post(`http://localhost:8080/login`, data)
+    try{
+      setError("");
+      const response = await axios.post(`http://localhost:8080/login`, data);
+      if(response)
+      login(response.data);
+    }catch(err){
+        setError("Email e/ou senha inválidos");
+    }
   }
 
   function submitRequest(e) {
@@ -47,7 +55,9 @@ const Login = () => {
               </div>
               
               <CButton color="success" type="submit" style={{color: 'black'}}>Entrar</CButton>
-              
+              {
+                error && <span style={{color:"red"}}>{error}</span>
+              }
               <div className="infos">
                 <p>Não possui login? <Link style={{textDecoration: 'none', color: 'green'}} to="/cadastro">Cadastre-se</Link></p>
               </div>

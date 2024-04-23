@@ -46,20 +46,16 @@ const Cadastro = () => {
   }
 
   function register() {
-    const data = {
-      nome: userName,
+    axios.post(`http://localhost:3000/register`,{
+      name: userName,
       email: userEmail,
-      senha: userPassword,
-      estado: userEstate,
-      cidade: userCity,
-      rua: userAdress,
-      numero: userHouseNumber,
+      password: userPassword,
+      state: userEstate,
+      city: userCity,
+      street: userAdress,
+      number: userHouseNumber,
       zipcode: userCEP,
-      // cnpj: userCNPJ,
-      // type: userType,
-    };
-
-    axios.post(`http://localhost:8080/registro`, data);
+    });
   }
 
   function submitRequest(e) {
