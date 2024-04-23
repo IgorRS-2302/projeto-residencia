@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 export const UserContext = createContext();
 
@@ -9,7 +9,7 @@ export function UseUserContext({ children }) {
     cnpj: "123456789884",
     endereco: { rua: "R. dos Bobos", numero: 123, cidade: "Recife" },
     pontos: 150,
-    pedidos:[{peso:121},{peso:63},{peso:56}]
+    pedidos: [{ peso: 121 }, { peso: 63 }, { peso: 56 }],
   });
 
   function login(user) {
