@@ -5,12 +5,12 @@ export function AppFooter() {
   return (
     <CFooter>
       <div>
-        <CImage src={Logo} style={{width: '12rem'}}/>
+        <CImage src={Logo} style={{ width: "12rem" }} />
       </div>
-      <div>
+      {/* <div>
         <span>Devs: </span>
         <b>Alipio Gomes, Igor Siqueira, João Gabriel, Kennedy Mendes e Wellington Michel.</b>
-      </div>
+      </div> */}
     </CFooter>
-  )
+  );
 }

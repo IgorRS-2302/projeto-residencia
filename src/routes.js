@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { lazy } from "react";
 
 const Main = lazy(() => import('./views/main/Main'))
 const Cadastro = lazy(()=> import('./views/Cadastro/Cadastro'))

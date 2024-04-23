@@ -1,0 +1,35 @@
+.containerDashboard {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 88vh;
+  color: #fff;
+}
+
+.divGraph {
+  background: #388e3c;
+  padding: 5%;
+}
+
+.divRequests {
+  background: #2d3648;
+  padding: 10%;
+}
+
+.divInfoGraph {
+  padding-top: 10px;
+}
+
+.infosGraphs {
+  margin: 0;
+}
+
+.divChart {
+  margin-top: 2%;
+  background: #fff;
+}
+
+.divRequests {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
